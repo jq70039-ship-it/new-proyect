@@ -1,1 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+
+>
+
+  <title>
+    LUX INK — Admin
+  </title>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="/admin/admin.css"
+  >
+
+</head>
+
+<body>
+
+  <section
+    id="loginView"
+    class="login-view"
+  >
+
+```
+<form
+  id="loginForm"
+  class="login-form"
+>
+
+  <p>
+    LUX INK
+  </p>
+
+
+  <h1>
+    ADMIN
+  </h1>
+
+
+  <input
+    type="email"
+    name="email"
+    placeholder="EMAIL"
+    required
+  >
+
+
+  <input
+    type="password"
+    name="password"
+    placeholder="PASSWORD"
+    required
+  >
+
+
+  <button
+    type="submit"
+  >
+    ENTER
+  </button>
+
+
+  <p
+    id="loginMessage"
+  >
+  </p>
+
+</form>
+```
+
+  </section>
+
+  <div
+    id="adminView"
+    class="admin-view hidden"
+  >
+
+```
+<header
+  class="admin-header"
+>
+
+  <strong>
+    LUX INK / ADMIN
+  </strong>
+
+
+  <button
+    id="logoutButton"
+  >
+    LOGOUT
+  </button>
+
+</header>
+
+
+
+<main
+  class="admin-main"
+>
+
+
+  <section
+    class="admin-section"
+  >
+
+    <h1>
+      WEBSITE SETTINGS
+    </h1>
+
+
+    <form
+      id="settingsForm"
+      class="admin-form"
+    >
+
+      <input
+        name="brand_name"
+        placeholder="BRAND NAME"
+      >
+
+
+      <input
+        name="artist_name"
+        placeholder="ARTIST NAME"
+      >
+
+
+      <textarea
+        name="artist_bio"
+        placeholder="ARTIST BIO"
+      ></textarea>
+
+
+      <input
+        name="location"
+        placeholder="LOCATION"
+      >
+
+
+      <input
+        name="instagram_url"
+        placeholder="INSTAGRAM URL"
+      >
+
+
+      <input
+        name="contact_email"
+        placeholder="CONTACT EMAIL"
+      >
+
+
+      <button
+        type="submit"
+      >
+        SAVE SETTINGS
+      </button>
+
+    </form>
+
+  </section>
+
+
+
+  <section
+    class="admin-section"
+  >
+
+    <h1>
+      TATTOO STYLES
+    </h1>
+
+
+    <div
+      id="stylesAdmin"
+    >
+    </div>
+
+  </section>
+
+
+
+  <section
+    class="admin-section"
+  >
+
+    <h1>
+      BOOKINGS
+    </h1>
+
+
+    <div
+      id="bookings"
+    >
+    </div>
+
+  </section>
+
+
+</main>
+```
+
+  </div>
+
+  <script
+    src="/admin/admin.js"
+  ></script>
+
+</body>
+</html>
 

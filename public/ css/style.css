@@ -1,1 +1,923 @@
+:root {
+--background: #080808;
+--surface: #101010;
+--surface-light: #181818;
+--text: #e9e4da;
+--muted: #aaa49a;
+--gold: #bda66c;
+--line: rgba(189, 166, 108, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+margin: 0;
+background: var(--background);
+color: var(--text);
+font-family: "DM Sans", sans-serif;
+}
+
+body.menu-open {
+overflow: hidden;
+}
+
+.site-frame {
+position: fixed;
+inset: 18px;
+border: 1px solid var(--line);
+pointer-events: none;
+z-index: 1000;
+}
+
+.hidden {
+display: none !important;
+}
+
+/* NAVIGATION */
+
+.navigation {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 95px;
+padding: 0 7vw;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+z-index: 100;
+}
+
+.brand {
+color: var(--text);
+text-decoration: none;
+
+font-family:
+"Playfair Display",
+serif;
+
+font-size: 23px;
+
+letter-spacing: 4px;
+}
+
+.desktop-navigation {
+display: flex;
+gap: 30px;
+}
+
+.desktop-navigation a {
+color: var(--text);
+text-decoration: none;
+
+text-transform: uppercase;
+
+font-size: 10px;
+letter-spacing: 2px;
+
+opacity: 0.8;
+
+transition:
+opacity 0.3s ease;
+}
+
+.desktop-navigation a:hover {
+opacity: 1;
+}
+
+.mobile-menu-button {
+display: none;
+
+background: transparent;
+color: var(--text);
+
+border: 0;
+
+font-size: 10px;
+letter-spacing: 2px;
+
+cursor: pointer;
+}
+
+.mobile-menu {
+display: none;
+}
+
+/* HERO */
+
+.hero-section {
+position: relative;
+
+min-height: 100vh;
+
+display: flex;
+align-items: center;
+
+padding:
+120px
+12vw
+80px;
+
+overflow: hidden;
+
+background:
+radial-gradient(
+circle at 75% 30%,
+#252019 0%,
+#10100f 35%,
+#050505 100%
+);
+}
+
+.hero-overlay {
+position: absolute;
+inset: 0;
+
+background:
+linear-gradient(
+90deg,
+rgba(0, 0, 0, 0.25),
+rgba(0, 0, 0, 0.6)
+);
+}
+
+.hero-content {
+position: relative;
+z-index: 2;
+
+max-width: 1000px;
+}
+
+.eyebrow {
+margin: 0 0 20px;
+
+color: var(--gold);
+
+font-size: 10px;
+letter-spacing: 4px;
+
+text-transform: uppercase;
+}
+
+.hero-content h1 {
+margin: 0;
+
+font-family:
+"Playfair Display",
+serif;
+
+font-weight: 400;
+
+font-size:
+clamp(
+75px,
+15vw,
+190px
+);
+
+line-height: 0.8;
+
+letter-spacing: -6px;
+}
+
+.hero-statement {
+margin:
+35px 0;
+
+font-size: 10px;
+
+letter-spacing: 5px;
+
+color: var(--muted);
+}
+
+.luxury-button {
+display: inline-block;
+
+padding:
+16px 25px;
+
+background: transparent;
+
+color: var(--text);
+
+border:
+1px solid
+var(--gold);
+
+font-size: 10px;
+
+letter-spacing: 2px;
+
+text-transform: uppercase;
+
+text-decoration: none;
+
+cursor: pointer;
+
+transition:
+background 0.3s ease,
+color 0.3s ease;
+}
+
+.luxury-button:hover {
+background:
+var(--gold);
+
+color:
+#090909;
+}
+
+/* ARTIST */
+
+.artist-section {
+padding:
+150px
+10vw;
+}
+
+.artist-content {
+max-width:
+750px;
+}
+
+.artist-content h2,
+.section-heading h2,
+.booking-heading h2 {
+margin:
+0 0 30px;
+
+font-family:
+"Playfair Display",
+serif;
+
+font-weight:
+400;
+
+font-size:
+clamp(
+50px,
+8vw,
+95px
+);
+
+line-height:
+0.95;
+}
+
+.artist-description {
+max-width:
+650px;
+
+color:
+var(--muted);
+
+line-height:
+1.9;
+
+font-size:
+15px;
+}
+
+.artist-location {
+margin-top:
+30px;
+
+color:
+var(--gold);
+
+font-size:
+10px;
+
+letter-spacing:
+2px;
+
+text-transform:
+uppercase;
+}
+
+/* STYLES */
+
+.styles-section {
+padding:
+100px
+7vw;
+}
+
+.section-heading {
+margin-bottom:
+70px;
+}
+
+.style-list {
+display:
+flex;
+
+flex-direction:
+column;
+}
+
+.style-card {
+display:
+grid;
+
+grid-template-columns:
+90px 1fr;
+
+gap:
+30px;
+
+min-height:
+70vh;
+
+padding:
+50px 0;
+
+border-top:
+1px solid
+var(--line);
+}
+
+.style-number {
+color:
+var(--gold);
+
+font-size:
+11px;
+
+letter-spacing:
+2px;
+}
+
+.style-content {
+display:
+grid;
+
+grid-template-columns:
+1fr 1.1fr;
+
+gap:
+60px;
+
+align-items:
+center;
+}
+
+.style-information h3 {
+margin:
+0 0 20px;
+
+font-family:
+"Playfair Display",
+serif;
+
+font-weight:
+400;
+
+font-size:
+clamp(
+45px,
+7vw,
+100px
+);
+
+line-height:
+0.9;
+}
+
+.style-information p {
+max-width:
+470px;
+
+color:
+var(--muted);
+
+line-height:
+1.8;
+
+margin-bottom:
+30px;
+}
+
+.style-image {
+width:
+100%;
+
+height:
+65vh;
+
+object-fit:
+cover;
+
+display:
+block;
+
+background:
+linear-gradient(
+135deg,
+#25211b,
+#0d0d0d
+);
+
+transition:
+transform 0.7s ease;
+}
+
+.style-card:hover
+.style-image {
+transform:
+scale(1.015);
+}
+
+/* GALLERY */
+
+.gallery-section {
+min-height:
+100vh;
+
+padding:
+120px
+7vw;
+
+background:
+#050505;
+}
+
+.gallery-close {
+margin-bottom:
+40px;
+
+padding: 0;
+
+background:
+transparent;
+
+border: 0;
+
+color:
+var(--text);
+
+font-size:
+10px;
+
+letter-spacing:
+2px;
+
+cursor:
+pointer;
+}
+
+.gallery-hero {
+display:
+grid;
+
+grid-template-columns:
+1.2fr 0.8fr;
+
+gap:
+50px;
+
+align-items:
+end;
+}
+
+.gallery-hero-image {
+width:
+100%;
+
+height:
+65vh;
+
+object-fit:
+cover;
+
+background:
+linear-gradient(
+135deg,
+#24211d,
+#0b0b0b
+);
+}
+
+.gallery-hero h2 {
+margin:
+0 0 20px;
+
+font-family:
+"Playfair Display",
+serif;
+
+font-size:
+clamp(
+60px,
+9vw,
+150px
+);
+
+font-weight:
+400;
+
+line-height:
+0.85;
+}
+
+.gallery-hero p {
+color:
+var(--muted);
+
+line-height:
+1.8;
+}
+
+.gallery-grid {
+display:
+grid;
+
+grid-template-columns:
+repeat(
+5,
+1fr
+);
+
+gap:
+12px;
+
+margin-top:
+70px;
+}
+
+.gallery-item {
+width:
+100%;
+
+aspect-ratio:
+1 / 1;
+
+object-fit:
+cover;
+
+cursor:
+pointer;
+
+background:
+var(--surface);
+
+transition:
+transform 0.4s ease;
+}
+
+.gallery-item:hover {
+transform:
+scale(1.03);
+}
+
+/* BOOKING */
+
+.booking-section {
+max-width:
+850px;
+
+margin:
+0 auto;
+
+padding:
+150px
+30px;
+}
+
+.booking-heading {
+margin-bottom:
+50px;
+}
+
+.booking-form {
+display:
+grid;
+
+gap:
+14px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+width:
+100%;
+
+padding:
+17px;
+
+background:
+var(--surface);
+
+border:
+1px solid
+#3a362f;
+
+color:
+var(--text);
+
+font:
+inherit;
+
+font-size:
+11px;
+
+letter-spacing:
+1px;
+
+outline:
+none;
+}
+
+.booking-form textarea {
+min-height:
+150px;
+
+resize:
+vertical;
+}
+
+.file-input-label {
+display:
+flex;
+
+flex-direction:
+column;
+
+gap:
+10px;
+
+padding:
+17px;
+
+border:
+1px dashed
+#4b4438;
+
+color:
+var(--gold);
+
+font-size:
+10px;
+
+letter-spacing:
+2px;
+}
+
+.file-input-label input {
+border:
+none;
+
+padding:
+0;
+}
+
+.booking-message {
+margin-top:
+20px;
+
+color:
+var(--gold);
+
+letter-spacing:
+2px;
+
+font-size:
+11px;
+}
+
+/* LIGHTBOX */
+
+.lightbox {
+position:
+fixed;
+
+inset:
+0;
+
+z-index:
+2000;
+
+background:
+rgba(
+0,
+0,
+0,
+0.97
+);
+
+padding:
+8vw;
+
+display:
+flex;
+
+align-items:
+center;
+
+justify-content:
+center;
+}
+
+.lightbox-close {
+position:
+absolute;
+
+top:
+35px;
+
+right:
+35px;
+
+background:
+transparent;
+
+color:
+var(--text);
+
+border:
+0;
+
+font-size:
+30px;
+
+cursor:
+pointer;
+}
+
+.lightbox-content {
+display:
+flex;
+
+align-items:
+center;
+
+gap:
+40px;
+}
+
+.lightbox-content img {
+max-width:
+65vw;
+
+max-height:
+80vh;
+
+object-fit:
+contain;
+}
+
+.lightbox-text {
+max-width:
+300px;
+}
+
+.lightbox-text h3 {
+font-family:
+"Playfair Display",
+serif;
+
+font-size:
+40px;
+
+font-weight:
+400;
+}
+
+/* MOBILE */
+
+@media (
+max-width: 800px
+) {
+
+.site-frame {
+inset:
+8px;
+}
+
+.navigation {
+padding:
+0 30px;
+}
+
+.desktop-navigation {
+display:
+none;
+}
+
+.mobile-menu-button {
+display:
+block;
+}
+
+.mobile-menu {
+position:
+fixed;
+
+```
+inset:
+  0;
+
+z-index:
+  500;
+
+background:
+  #090909;
+
+padding:
+  130px
+  40px;
+
+flex-direction:
+  column;
+
+gap:
+  30px;
+```
+
+}
+
+.mobile-menu.active {
+display:
+flex;
+}
+
+.mobile-menu a {
+color:
+var(--text);
+
+```
+text-decoration:
+  none;
+
+font-family:
+  "Playfair Display",
+  serif;
+
+font-size:
+  45px;
+```
+
+}
+
+.style-card {
+grid-template-columns:
+1fr;
+}
+
+.style-content {
+grid-template-columns:
+1fr;
+
+```
+gap:
+  35px;
+```
+
+}
+
+.style-image {
+height:
+55vh;
+}
+
+.gallery-hero {
+grid-template-columns:
+1fr;
+}
+
+.gallery-grid {
+grid-template-columns:
+repeat(
+2,
+1fr
+);
+}
+
+.lightbox-content {
+flex-direction:
+column;
+}
+
+.lightbox-content img {
+max-width:
+85vw;
+
+```
+max-height:
+  65vh;
+```
+
+}
+
+}
 

@@ -1,1 +1,413 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+
+>
+
+  <title>LUX INK — Tattoo Artist</title>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="/css/style.css"
+  >
+
+</head>
+
+<body>
+
+  <div class="site-frame"></div>
+
+  <header class="navigation">
+
+```
+<a
+  href="#home"
+  class="brand"
+  id="navigationBrand"
+>
+  LUX INK
+</a>
+
+
+<nav
+  class="desktop-navigation"
+>
+
+  <a href="#home">
+    Home
+  </a>
+
+  <a href="#artist">
+    Artist
+  </a>
+
+  <a href="#styles">
+    Styles
+  </a>
+
+  <a href="#booking">
+    Book
+  </a>
+
+</nav>
+
+
+<button
+  class="mobile-menu-button"
+  id="mobileMenuButton"
+>
+  MENU
+</button>
+```
+
+  </header>
+
+  <div
+    class="mobile-menu"
+    id="mobileMenu"
+  >
+
+```
+<a href="#home">
+  Home
+</a>
+
+<a href="#artist">
+  Artist
+</a>
+
+<a href="#styles">
+  Styles
+</a>
+
+<a href="#booking">
+  Book
+</a>
+```
+
+  </div>
+
+  <main>
+
+```
+<section
+  id="home"
+  class="hero-section"
+>
+
+  <div class="hero-overlay"></div>
+
+
+  <div class="hero-content">
+
+    <p class="eyebrow">
+      PRIVATE TATTOO STUDIO
+    </p>
+
+
+    <h1
+      id="brandName"
+    >
+      LUX INK
+    </h1>
+
+
+    <p class="hero-statement">
+      ART. SKIN. IDENTITY.
+    </p>
+
+
+    <a
+      href="#booking"
+      class="luxury-button"
+    >
+      BOOK YOUR SESSION
+    </a>
+
+  </div>
+
+</section>
+
+
+
+<section
+  id="artist"
+  class="artist-section"
+>
+
+  <div class="artist-content">
+
+    <p class="eyebrow">
+      THE ARTIST
+    </p>
+
+
+    <h2
+      id="artistName"
+    >
+      Tattoo Artist
+    </h2>
+
+
+    <p
+      id="artistBio"
+      class="artist-description"
+    >
+    </p>
+
+
+    <p
+      id="artistLocation"
+      class="artist-location"
+    >
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<section
+  id="styles"
+  class="styles-section"
+>
+
+  <div class="section-heading">
+
+    <p class="eyebrow">
+      SELECT YOUR LANGUAGE
+    </p>
+
+
+    <h2>
+      THE STYLES
+    </h2>
+
+  </div>
+
+
+  <div
+    id="styleList"
+    class="style-list"
+  >
+  </div>
+
+</section>
+
+
+
+<section
+  id="galleryView"
+  class="gallery-section hidden"
+>
+
+  <button
+    id="closeGallery"
+    class="gallery-close"
+  >
+    × CLOSE GALLERY
+  </button>
+
+
+  <div
+    id="galleryHero"
+    class="gallery-hero"
+  >
+  </div>
+
+
+  <div
+    id="galleryGrid"
+    class="gallery-grid"
+  >
+  </div>
+
+</section>
+
+
+
+<section
+  id="booking"
+  class="booking-section"
+>
+
+  <div class="booking-heading">
+
+    <p class="eyebrow">
+      BEGIN YOUR PIECE
+    </p>
+
+
+    <h2>
+      BOOK A SESSION
+    </h2>
+
+  </div>
+
+
+  <form
+    id="bookingForm"
+    class="booking-form"
+  >
+
+    <input
+      type="text"
+      name="name"
+      placeholder="FULL NAME"
+      required
+    >
+
+
+    <input
+      type="email"
+      name="email"
+      placeholder="EMAIL"
+      required
+    >
+
+
+    <input
+      type="text"
+      name="phone"
+      placeholder="PHONE"
+    >
+
+
+    <select
+      name="style_id"
+      id="bookingStyle"
+    >
+
+      <option value="">
+        SELECT STYLE
+      </option>
+
+    </select>
+
+
+    <input
+      type="text"
+      name="body_area"
+      placeholder="BODY AREA"
+    >
+
+
+    <input
+      type="text"
+      name="tattoo_size"
+      placeholder="APPROXIMATE SIZE"
+    >
+
+
+    <input
+      type="date"
+      name="preferred_date"
+    >
+
+
+    <textarea
+      name="description"
+      placeholder="TELL US ABOUT YOUR IDEA"
+    ></textarea>
+
+
+    <label
+      class="file-input-label"
+    >
+
+      REFERENCE IMAGE
+
+      <input
+        type="file"
+        name="reference_image"
+        accept="image/jpeg,image/png,image/webp"
+      >
+
+    </label>
+
+
+    <button
+      type="submit"
+      class="luxury-button"
+    >
+      SEND REQUEST
+    </button>
+
+  </form>
+
+
+  <p
+    id="bookingMessage"
+    class="booking-message"
+  >
+  </p>
+
+</section>
+```
+
+  </main>
+
+  <div
+    id="lightbox"
+    class="lightbox hidden"
+  >
+
+```
+<button
+  id="closeLightbox"
+  class="lightbox-close"
+>
+  ×
+</button>
+
+
+<div class="lightbox-content">
+
+  <img
+    id="lightboxImage"
+    alt="Tattoo artwork"
+  >
+
+
+  <div
+    id="lightboxText"
+    class="lightbox-text"
+  >
+  </div>
+
+</div>
+```
+
+  </div>
+
+  <script
+    src="/js/app.js"
+  ></script>
+
+</body>
+</html>
 
